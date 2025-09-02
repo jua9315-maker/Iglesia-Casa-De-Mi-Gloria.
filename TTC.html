@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TO CHANCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+        .horizontal-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-gallery::-webkit-scrollbar-thumb {
+            background-color: #d1d5db;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Nuevo logo de jóvenes -->
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=TTC" alt="Logo de TTC" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- TTC Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-2 text-gray-900">TIME TO CHANCE</h2>
+            <p class="text-xl md:text-2xl font-semibold mb-8 text-gray-700">TIEMPOS DE CAMBIOS</p>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                El Grupo de Jóvenes TTC es un espacio para que los jóvenes crezcan en su fe, construyan relaciones sólidas y sirvan a la comunidad con pasión.
+            </p>
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <!-- Misión -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestra Misión</h3>
+                    <p class="text-gray-600 text-left">
+                        Empoderar a los jóvenes para que vivan una vida centrada en Cristo, siendo un testimonio de su amor en el mundo.
+                    </p>
+                </div>
+                <!-- Visión -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestra Visión</h3>
+                    <p class="text-gray-600 text-left">
+                        Ser una generación de líderes apasionados por Dios, que transforman su entorno a través de la fe, el servicio y el discipulado.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Galería -->
+            <div class="mt-12 p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-900">Galería de Fotos y Videos</h3>
+                <div id="gallery" class="horizontal-gallery flex overflow-x-scroll snap-x gap-4 pb-4">
+                    <!-- Placeholder de fotos -->
+                    <img src="https://placehold.co/400x300/5a67d8/ffffff?text=Foto+1" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/4299e1/ffffff?text=Foto+2" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/9f7aea/ffffff?text=Foto+3" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/ecc94b/ffffff?text=Foto+4" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/f6ad55/ffffff?text=Foto+5" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <!-- Placeholder de video -->
+                    <iframe class="w-[400px] h-[300px] rounded-lg shadow-md flex-shrink-0 snap-center" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                    *Nota: La galería se desliza automáticamente.
+                </p>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <!-- Actividades -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestras Actividades</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-left">
+                        <li>Estudios bíblicos semanales</li>
+                        <li>Eventos sociales y recreativos</li>
+                        <li>Proyectos de servicio comunitario</li>
+                        <li>Retiros y conferencias juveniles</li>
+                    </ul>
+                </div>
+                <!-- Horarios y Ubicación -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Horarios y Ubicación</h3>
+                    <p class="text-gray-600 mb-2">Nos reunimos todos los viernes a las 7:00 PM en el salón juvenil de la iglesia.</p>
+                    <p class="text-gray-600">¡Te esperamos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Autoscroll Gallery
+        const gallery = document.getElementById('gallery');
+        const scrollStep = 416; // Ancho de la imagen + gap (400 + 16)
+        let scrollPosition = 0;
+
+        setInterval(() => {
+            if (scrollPosition + gallery.clientWidth >= gallery.scrollWidth) {
+                scrollPosition = 0;
+            } else {
+                scrollPosition += scrollStep;
+            }
+            gallery.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }, 3000); // Cambia de imagen cada 3 segundos
+    </script>
+</body>
+</html>
