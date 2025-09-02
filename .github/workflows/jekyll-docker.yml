@@ -1,20 +1,1046 @@
-name: Jekyll site CI
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=Logo" alt="Logo de la Iglesia" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
 
-jobs:
-  build:
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Contáctanos</h2>
+            
+            <!-- Contact Directory -->
+            <div class="mt-12 text-center text-gray-700">
+                <h3 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Directorio de Pastores y Líderes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Pastor Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
+                        <img src="https://placehold.co/150x150/374151/e5e7eb?text=Pastor" alt="Foto del Pastor" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900">Pastor John Doe</h4>
+                        <p class="text-gray-600">Pastor Principal</p>
+                        <a href="tel:+1234567890" class="text-blue-600 hover:underline font-semibold">(123) 456-7890</a>
+                    </div>
+                    <!-- Pastor Card 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
+                        <img src="https://placehold.co/150x150/374151/e5e7eb?text=Pastor" alt="Foto del Pastor" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900">Pastor Jane Smith</h4>
+                        <p class="text-gray-600">Co-pastora</p>
+                        <a href="tel:+1234567891" class="text-blue-600 hover:underline font-semibold">(123) 456-7891</a>
+                    </div>
+                    <!-- Youth Leader Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
+                        <img src="https://placehold.co/150x150/374151/e5e7eb?text=Líder" alt="Foto del Líder de Jóvenes" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900">Líder Paul Jones</h4>
+                        <p class="text-gray-600">Líder de Jóvenes</p>
+                        <a href="tel:+1234567892" class="text-blue-600 hover:underline font-semibold">(123) 456-7892</a>
+                    </div>
+                </div>
+            </div>
 
-    runs-on: ubuntu-latest
+            <div class="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md mt-12">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-900">Generar una Oración</h3>
+                <p class="text-gray-600 mb-4">Escribe una petición o situación para que la IA genere una oración para ti.</p>
+                <div class="mb-4">
+                    <label for="prayer-request" class="sr-only">Petición de oración</label>
+                    <input type="text" id="prayer-request" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 transition-colors" placeholder="Ej. Por sanación, por fortaleza, por un familiar...">
+                </div>
+                <button id="generate-prayer" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">Generar Oración</button>
+                <div id="prayer-output" class="mt-6 text-left p-4 bg-gray-100 rounded-lg border border-gray-300 min-h-[100px] flex items-center justify-center text-gray-500">
+                    La oración aparecerá aquí.
+                </div>
+                <div id="loading-spinner-prayer" class="hidden mt-4">
+                    <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
+                </div>
+            </div>
+            
+            <!-- Contact Information and Location -->
+            <div class="mt-12 text-center text-gray-700">
+                <p class="text-lg">También puedes visitarnos en:</p>
+                <p class="text-xl font-bold mt-2">1234 Calle de la Fe, Ciudad de la Esperanza</p>
+                <p class="text-lg mt-4">Envíanos un correo: <span class="font-bold">info@iglesiacasademigloria.com</span></p>
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+                <!-- Map Section -->
+                <h3 class="text-3xl font-bold mt-12 mb-4 text-gray-900">Nuestra Ubicación</h3>
+                <!-- Placeholder iframe for the map. Replace 'YOUR_API_KEY' with your Google Maps API key
+                     and 'Managua+Nicaragua' with your church's actual address for a precise map. -->
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=&q=Managua+Nicaragua"
+                    class="w-full h-96 rounded-lg shadow-lg border-2 border-gray-300"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        async function generatePrayer(prompt) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=`;
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: {
+                    parts: [{ text: "Actúa como un guía espiritual. Genera una oración de 50-80 palabras, manteniendo un tono de fe, esperanza y consuelo. La oración debe ser un solo párrafo y terminar con 'Amén'." }]
+                }
+            };
+            
+            let response;
+            try {
+                response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "No se pudo generar la oración. Intenta con una petición diferente.";
+                return text;
+            } catch (error) {
+                console.error("Error fetching from Gemini API:", error);
+                return "Hubo un problema al conectar con el servicio. Por favor, inténtalo de nuevo más tarde.";
+            }
+        }
+
+        document.getElementById('generate-prayer').addEventListener('click', async () => {
+            const input = document.getElementById('prayer-request').value;
+            const output = document.getElementById('prayer-output');
+            const spinner = document.getElementById('loading-spinner-prayer');
+            
+            if (!input.trim()) {
+                output.textContent = "Por favor, introduce una petición para la oración.";
+                return;
+            }
+
+            output.textContent = '';
+            spinner.classList.remove('hidden');
+            
+            const prayer = await generatePrayer(input);
+            output.textContent = prayer;
+            spinner.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Vivos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=Logo" alt="Logo de la Iglesia" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Live Streams Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Transmisiones en Vivo</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed mb-12">
+                Únete a nuestra transmisión en vivo cada semana para adoración, sermones inspiradores y comunidad.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Servicio Dominical</h3>
+                    <p class="text-gray-600 mb-4">Acompáñanos en nuestro servicio de adoración semanal.</p>
+                    <a href="https://www.youtube.com/watch?v=tuEnJ09vS_E" class="inline-block bg-red-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-red-700 transition-transform transform hover:scale-105" target="_blank">Ver en YouTube</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Estudio Bíblico</h3>
+                    <p class="text-gray-600 mb-4">Profundiza en la Palabra de Dios con nuestro estudio semanal.</p>
+                    <a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=2594619717469888" class="inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105" target="_blank">Ver en Facebook</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Culto de Oración</h3>
+                    <p class="text-gray-600 mb-4">Únete a nuestra transmisión de oración de media semana.</p>
+                    <a href="https://www.youtube.com/watch?v=p4vW4QG8_tU" class="inline-block bg-red-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-red-700 transition-transform transform hover:scale-105" target="_blank">Ver en YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=Logo" alt="Logo de la Iglesia" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Nuestra Misión</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                Somos una comunidad dedicada a compartir el evangelio de Jesucristo. Nuestra misión es adorar a Dios, crecer en nuestra fe, servir a nuestra comunidad y compartir el amor de Cristo con todos. Creemos en la Biblia como la Palabra de Dios y buscamos vivir de acuerdo a sus enseñanzas.
+            </p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Adoración</h3>
+                    <p class="text-gray-600">Únete a nosotros en un ambiente de adoración sincera y poderosa.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Comunidad</h3>
+                    <p class="text-gray-600">Crece en la fe junto a hermanos y hermanas que te apoyarán.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Servicio</h3>
+                    <p class="text-gray-600">Sirve a otros y haz una diferencia en el mundo para el reino de Dios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGLESIA CASA DE MI GLORIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+        .horizontal-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-gallery::-webkit-scrollbar-thumb {
+            background-color: #d1d5db;
+            border-radius: 4px;
+        }
+        .hero-image {
+            background-image: url('https://placehold.co/1920x1080/374151/e5e7eb?text=Portada');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=Logo" alt="Logo de la Iglesia" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+    
+    <!-- Hero Image Section -->
+    <div class="hero-image h-[300px] md:h-[400px]"></div>
+
+    <!-- Welcome Section (moved below the hero image) -->
+    <section class="py-16 bg-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Bienvenidos a nuestra iglesia</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">Un lugar donde puedes conectar, crecer en tu fe y ser parte de nuestra familia.</p>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Nuestra Comunidad en Imágenes</h2>
+            <div id="gallery1" class="horizontal-gallery flex overflow-x-scroll snap-x gap-6 pb-4">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+1" alt="Foto de la comunidad 1" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+2" alt="Foto de la comunidad 2" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+3" alt="Foto de la comunidad 3" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+4" alt="Foto de la comunidad 4" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+5" alt="Foto de la comunidad 5" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+6" alt="Foto de la comunidad 6" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+                *La galería se desliza automáticamente.
+            </p>
+        </div>
+    </section>
+
+    <!-- TTC Photo Gallery Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Grupo de Jóvenes TTC</h2>
+            <div id="gallery2" class="horizontal-gallery flex overflow-x-scroll snap-x gap-6 pb-4">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+1" alt="Foto del grupo de jóvenes 1" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+2" alt="Foto del grupo de jóvenes 2" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+3" alt="Foto del grupo de jóvenes 3" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+4" alt="Foto del grupo de jóvenes 4" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+5" alt="Foto del grupo de jóvenes 5" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+6" alt="Foto del grupo de jóvenes 6" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+                *La galería se desliza automáticamente.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="https://www.facebook.com/Jcar9315" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Autoscroll Gallery
+        const gallery1 = document.getElementById('gallery1');
+        const gallery2 = document.getElementById('gallery2');
+        
+        function setupAutoScroll(gallery) {
+            let intervalId;
+            const scrollStep = 400; // Paso de desplazamiento
+            const scrollInterval = 3000; // Intervalo de tiempo
+
+            const startScroll = () => {
+                intervalId = setInterval(() => {
+                    if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth) {
+                        gallery.scrollLeft = 0;
+                    } else {
+                        gallery.scrollLeft += scrollStep;
+                    }
+                }, scrollInterval);
+            };
+
+            const stopScroll = () => {
+                clearInterval(intervalId);
+            };
+
+            gallery.addEventListener('mouseenter', stopScroll);
+            gallery.addEventListener('mouseleave', startScroll);
+
+            startScroll(); // Iniciar el desplazamiento al cargar
+        }
+
+        setupAutoScroll(gallery1);
+        setupAutoScroll(gallery2);
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+        .horizontal-videos::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-videos::-webkit-scrollbar-thumb {
+            background-color: #d1d5db;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=Logo" alt="Logo de la Iglesia" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Sermons Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Nuestros Sermones</h2>
+
+            <!-- Video Section -->
+            <div class="p-6 bg-white rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-900">Sermones Grabados</h3>
+                <div class="horizontal-videos flex overflow-x-scroll snap-x gap-4 pb-4">
+                    <div class="flex-shrink-0 snap-center w-full sm:w-1/2 lg:w-1/3">
+                        <iframe class="w-full h-48 rounded-lg shadow-md" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="mt-2 text-sm text-gray-600">Título del Sermón 1</p>
+                    </div>
+                    <div class="flex-shrink-0 snap-center w-full sm:w-1/2 lg:w-1/3">
+                        <iframe class="w-full h-48 rounded-lg shadow-md" src="https://www.youtube.com/embed/v96yL1L_6J4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="mt-2 text-sm text-gray-600">Título del Sermón 2</p>
+                    </div>
+                    <div class="flex-shrink-0 snap-center w-full sm:w-1/2 lg:w-1/3">
+                        <iframe class="w-full h-48 rounded-lg shadow-md" src="https://www.youtube.com/embed/Z0S_99eQJ7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="mt-2 text-sm text-gray-600">Título del Sermón 3</p>
+                    </div>
+                    <!-- Agrega más videos aquí si es necesario -->
+                </div>
+            </div>
+
+            <!-- AI Sermon Generator -->
+            <div class="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-900">Generar Resumen de Sermón</h3>
+                <p class="text-gray-600 mb-4">Ingresa un tema o pasaje bíblico para obtener un resumen de sermón generado por IA.</p>
+                <div class="mb-4">
+                    <label for="sermon-input" class="sr-only">Tema del sermón</label>
+                    <input type="text" id="sermon-input" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 transition-colors" placeholder="Ej. Amor de Dios, el buen samaritano...">
+                </div>
+                <button id="generate-sermon" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">Generar</button>
+                <div id="sermon-output" class="mt-6 text-left p-4 bg-gray-100 rounded-lg border border-gray-300 min-h-[100px] flex items-center justify-center text-gray-500">
+                    El resumen aparecerá aquí.
+                </div>
+                <div id="loading-spinner-sermon" class="hidden mt-4">
+                    <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        async function generateSermonSummary(prompt) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=`;
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: {
+                    parts: [{ text: "Actúa como un pastor experimentado. Genera un resumen de sermón de 100-150 palabras, manteniendo un tono edificante y bíblico. Evita el lenguaje secular y céntrate en los principios de la fe cristiana. La respuesta debe ser un solo párrafo." }]
+                }
+            };
+
+            let response;
+            try {
+                response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "No se pudo generar el resumen. Intenta con un tema diferente.";
+                return text;
+            } catch (error) {
+                console.error("Error fetching from Gemini API:", error);
+                return "Hubo un problema al conectar con el servicio. Por favor, inténtalo de nuevo más tarde.";
+            }
+        }
+
+        document.getElementById('generate-sermon').addEventListener('click', async () => {
+            const input = document.getElementById('sermon-input').value;
+            const output = document.getElementById('sermon-output');
+            const spinner = document.getElementById('loading-spinner-sermon');
+            
+            if (!input.trim()) {
+                output.textContent = "Por favor, introduce un tema para el sermón.";
+                return;
+            }
+
+            output.textContent = '';
+            spinner.classList.remove('hidden');
+
+            const summary = await generateSermonSummary(input);
+            output.textContent = summary;
+            spinner.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TO CHANCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+        .horizontal-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-gallery::-webkit-scrollbar-thumb {
+            background-color: #d1d5db;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Nuevo logo de jóvenes -->
+                <img src="https://placehold.co/50x50/374151/e5e7eb?text=TTC" alt="Logo de TTC" class="w-10 h-10 rounded-full">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">IGLESIA CASA DE MI GLORIA</a>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+	        <a href="Pagina Principal.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="Pagina Principal.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- TTC Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-2 text-gray-900">TIME TO CHANCE</h2>
+            <p class="text-xl md:text-2xl font-semibold mb-8 text-gray-700">TIEMPOS DE CAMBIOS</p>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                El Grupo de Jóvenes TTC es un espacio para que los jóvenes crezcan en su fe, construyan relaciones sólidas y sirvan a la comunidad con pasión.
+            </p>
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <!-- Misión -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestra Misión</h3>
+                    <p class="text-gray-600 text-left">
+                        Empoderar a los jóvenes para que vivan una vida centrada en Cristo, siendo un testimonio de su amor en el mundo.
+                    </p>
+                </div>
+                <!-- Visión -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestra Visión</h3>
+                    <p class="text-gray-600 text-left">
+                        Ser una generación de líderes apasionados por Dios, que transforman su entorno a través de la fe, el servicio y el discipulado.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Galería -->
+            <div class="mt-12 p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-900">Galería de Fotos y Videos</h3>
+                <div id="gallery" class="horizontal-gallery flex overflow-x-scroll snap-x gap-4 pb-4">
+                    <!-- Placeholder de fotos -->
+                    <img src="https://placehold.co/400x300/5a67d8/ffffff?text=Foto+1" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/4299e1/ffffff?text=Foto+2" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/9f7aea/ffffff?text=Foto+3" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/ecc94b/ffffff?text=Foto+4" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <img src="https://placehold.co/400x300/f6ad55/ffffff?text=Foto+5" alt="Foto de evento de jóvenes" class="rounded-lg shadow-md flex-shrink-0 snap-center">
+                    <!-- Placeholder de video -->
+                    <iframe class="w-[400px] h-[300px] rounded-lg shadow-md flex-shrink-0 snap-center" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                    *Nota: La galería se desliza automáticamente.
+                </p>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <!-- Actividades -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestras Actividades</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-left">
+                        <li>Estudios bíblicos semanales</li>
+                        <li>Eventos sociales y recreativos</li>
+                        <li>Proyectos de servicio comunitario</li>
+                        <li>Retiros y conferencias juveniles</li>
+                    </ul>
+                </div>
+                <!-- Horarios y Ubicación -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Horarios y Ubicación</h3>
+                    <p class="text-gray-600 mb-2">Nos reunimos todos los viernes a las 7:00 PM en el salón juvenil de la iglesia.</p>
+                    <p class="text-gray-600">¡Te esperamos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Autoscroll Gallery
+        const gallery = document.getElementById('gallery');
+        const scrollStep = 416; // Ancho de la imagen + gap (400 + 16)
+        let scrollPosition = 0;
+
+        setInterval(() => {
+            if (scrollPosition + gallery.clientWidth >= gallery.scrollWidth) {
+                scrollPosition = 0;
+            } else {
+                scrollPosition += scrollStep;
+            }
+            gallery.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }, 3000); // Cambia de imagen cada 3 segundos
+    </script>
+</body>
+</html>
