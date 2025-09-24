@@ -28,3 +28,4 @@ Este es el sitio web oficial de la Iglesia Casa de Mi Gloria. El objetivo es pro
 ## 🤝 Contribuciones
 
 Si deseas contribuir a este proyecto, por favor, contacta con el equipo de desarrollo.
+
