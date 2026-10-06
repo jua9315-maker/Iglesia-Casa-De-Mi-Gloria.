@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGLESIA CASA DE MI GLORIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: none;
+        z-index: 1000;
+    }
+    .horizontal-gallery::-webkit-scrollbar {
+        height: 8px;
+    }
+    .horizontal-gallery::-webkit-scrollbar-thumb {
+        background-color: #d1d5db;
+        border-radius: 4px;
+    }
+    .hero-section {
+        background-image: url('media/iglesia.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 100vh;
+        min-height: 300px;
+        max-height: 800px;
+        margin-top: 0px;
+        transition: opacity 0.7s;
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(161, 175, 234, 0.7) 0%, rgba(11, 148, 66, 0.5) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.7s;
+    }
+    .hero-section::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        pointer-events: none;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
+        z-index: 2;
+    }
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gold-text {
+        color: #FFD700;
+    }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+   <!-- Hero Image Section (arriba de todo) -->
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <div class="logo-container">
+                <img src="media/logo3.png" id="logo-grande" class="w-90 h-90 rounded-full mb-5 shadow-lg border-21 border-white" alt="Logo de la Iglesia" style="cursor:pointer;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Header con menú de navegación debajo de la imagen -->
+    <header id="menu" class="bg-white shadow-sm sticky top-0 z-50">
+
+    <!-- Header con menú de navegación debajo de la imagen -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="media/logo1.png" class="w-12 h-12 rounded-full">
+                <span class="text-2xl font-bold text-gray-900" style="cursor:pointer;" onclick="location.reload();">IGLESIA CASA DE MI GLORIA</span>
+            </div>
+            <div class="space-x-4 hidden md:flex">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+    
+    <!-- Hero Image Section -->
+    <div class="hero-image h-[250px] md:h-[140px]"></div>
+
+    <!-- Welcome Section (moved below the hero image) -->
+<section class="pt-6 pb-2 md:pt-18 md:pb-28 bg-white text-center">
+    <div class="container mx-auto px-3">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-5 leading-tight">BIENVENIDOS</h1>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-10 leading-tight"> A Nuestra Iglesia</h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">Un lugar donde puedes conectar, crecer en tu fe y ser parte de nuestra familia.</p>
+    </div>
+</section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Nuestra Comunidad en Imágenes</h2>
+            <div id="gallery1" class="horizontal-gallery flex overflow-x-scroll snap-x gap-6 pb-4">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+1" alt="Foto de la comunidad 1" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+2" alt="Foto de la comunidad 2" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+3" alt="Foto de la comunidad 3" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+4" alt="Foto de la comunidad 4" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+5" alt="Foto de la comunidad 5" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/525252/d4d4d4?text=Foto+6" alt="Foto de la comunidad 6" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+                *La galería se desliza automáticamente.
+            </p>
+        </div>
+    </section>
+
+    <!-- TTC Photo Gallery Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Grupo de Jóvenes TTC</h2>
+            <div id="gallery2" class="horizontal-gallery flex overflow-x-scroll snap-x gap-6 pb-4">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+1" alt="Foto del grupo de jóvenes 1" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+2" alt="Foto del grupo de jóvenes 2" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+3" alt="Foto del grupo de jóvenes 3" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+4" alt="Foto del grupo de jóvenes 4" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+5" alt="Foto del grupo de jóvenes 5" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+                <img src="https://placehold.co/600x450/57534e/e7e5e4?text=Jóvenes+6" alt="Foto del grupo de jóvenes 6" class="w-96 h-64 flex-shrink-0 snap-center rounded-lg shadow-md transition-transform duration-300 transform hover:scale-110">
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+                *La galería se desliza automáticamente.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="https://www.facebook.com/Jcar9315" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Autoscroll Gallery
+        const gallery1 = document.getElementById('gallery1');
+        const gallery2 = document.getElementById('gallery2');
+        
+        function setupAutoScroll(gallery) {
+            let intervalId;
+            const scrollStep = 400; // Paso de desplazamiento
+            const scrollInterval = 3000; // Intervalo de tiempo
+
+            const startScroll = () => {
+                intervalId = setInterval(() => {
+                    if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth) {
+                        gallery.scrollLeft = 0;
+                    } else {
+                        gallery.scrollLeft += scrollStep;
+                    }
+                }, scrollInterval);
+            };
+
+            const stopScroll = () => {
+                clearInterval(intervalId);
+            };
+
+            gallery.addEventListener('mouseenter', stopScroll);
+            gallery.addEventListener('mouseleave', startScroll);
+
+            startScroll(); // Iniciar el desplazamiento al cargar
+        }
+
+        setupAutoScroll(gallery1);
+        setupAutoScroll(gallery2);
+    </script>
+    <script>
+document.getElementById('logo-grande').addEventListener('click', function() {
+    const target = document.getElementById('menu');
+    const offset = 0; // Ajusta este valor para dejar espacio arriba del menú
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // milisegundos, ajusta para más lento o rápido
+    let start = null;
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const percent = Math.min(progress / duration, 1);
+        window.scrollTo(0, startPosition + distance * percent);
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+    window.requestAnimationFrame(step);
+});
+</script>
+<script>
+    // Desvanecimiento al hacer scroll
+    window.addEventListener('scroll', function() {
+        const hero = document.querySelector('.hero-section');
+        const overlay = document.querySelector('.hero-overlay');
+        let opacity = 1 - window.scrollY / 400;
+        if (opacity < 0) opacity = 0;
+        hero.style.opacity = opacity;
+        overlay.style.opacity = opacity;
+    });
+
+    // Scroll personalizado para el logo grande
+    document.getElementById('logo-grande').addEventListener('click', function() {
+        const target = document.getElementById('menu');
+        const offset = 0; // Ajusta este valor para dejar espacio arriba del menú
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1000; // milisegundos, ajusta para más lento o rápido
+        let start = null;
+
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const percent = Math.min(progress / duration, 1);
+            window.scrollTo(0, startPosition + distance * percent);
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            }
+        }
+        window.requestAnimationFrame(step);
+    });
+</script>
+</body>
+</html>

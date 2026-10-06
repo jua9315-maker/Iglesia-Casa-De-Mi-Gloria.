@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f6f5;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="media/logo1.png" class="w-12 h-12 rounded-full">
+                <span class="text-2xl font-bold text-gray-900" style="cursor:pointer;" onclick="location.reload();">IGLESIA CASA DE MI GLORIA</span>
+            </div>
+            <div class="space-x-8 hidden md:flex">
+	        <a href="index.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Nosotros</a>
+                <a href="sermones.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Sermones</a>
+                <a href="envivos.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">En Vivos</a>
+                <a href="ttc.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">TTC</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contacto</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+	    <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Inicio</a>
+            <a href="nosotros.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Nosotros</a>
+            <a href="sermones.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Sermones</a>
+            <a href="envivos.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">En Vivos</a>
+            <a href="ttc.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">TTC</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Contáctanos</h2>
+            
+            <!-- Contact Directory -->
+            <div class="mt-12 text-center text-gray-700">
+                <h3 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Directorio de Pastores y Líderes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Pastor Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
+                        <img src="https://placehold.co/150x150/374151/e5e7eb?text=Pastor" alt="Foto del Pastor" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900">Pastor John Doe</h4>
+                        <p class="text-gray-600">Pastora Principal</p>
+                        <a href="tel:+1234567890" class="text-blue-600 hover:underline font-semibold">(123) 456-7890</a>
+                    </div>
+                    <!-- Pastor Card 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
+                        <img src="https://placehold.co/150x150/374151/e5e7eb?text=Pastor" alt="Foto del Pastor" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900">Pastor Jane Smith</h4>
+                        <p class="text-gray-600">Co-pastora</p>
+                        <a href="tel:+1234567891" class="text-blue-600 hover:underline font-semibold">(123) 456-7891</a>
+                    </div>
+                    <!-- Youth Leader Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
+                        <img src="https://placehold.co/150x150/374151/e5e7eb?text=Líder" alt="Foto del Líder de Jóvenes" class="w-32 h-32 rounded-full object-cover shadow-lg">
+                        <h4 class="text-xl font-semibold text-gray-900">Líder Paul Jones</h4>
+                        <p class="text-gray-600">Líder de Jóvenes</p>
+                        <a href="tel:+1234567892" class="text-blue-600 hover:underline font-semibold">(123) 456-7892</a>
+                    </div>
+                </div>
+            </div>
+   <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 mt-12">
+    <!-- Versículo del Día (izquierda) -->
+    <div class="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Versículo del Día</h3>
+        <p class="text-gray-600 mb-4">Haz clic para recibir un versículo bíblico de ánimo.</p>
+        <button id="show-verse" type="button" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">Mostrar Versículo</button>
+        <div id="verse-output" class="mt-6 text-center p-4 bg-gray-100 rounded-lg border border-gray-300 min-h-[60px] flex items-center justify-center text-gray-700">
+            El versículo aparecerá aquí.
+        </div>
+    </div>
+<script>
+const verses = [
+    "Jehová es mi pastor; nada me faltará. - Salmo 23:1",
+    "Todo lo puedo en Cristo que me fortalece. - Filipenses 4:13",
+    "Porque yo sé los planes que tengo para vosotros, dice el Señor. - Jeremías 29:11",
+    "El Señor es mi luz y mi salvación; ¿a quién temeré? - Salmo 27:1"
+];
+document.getElementById('show-verse').addEventListener('click', () => {
+    const output = document.getElementById('verse-output');
+    const random = Math.floor(Math.random() * verses.length);
+    output.textContent = verses[random];
+});
+</script>
+ <!-- Frase de Ánimo (derecha) -->
+    <div class="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Frase de Ánimo</h3>
+        <p class="text-gray-600 mb-4">Haz clic para recibir una frase de esperanza.</p>
+        <button id="show-phrase" type="button" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">Mostrar Frase</button>
+        <div id="phrase-output" class="mt-6 text-center p-4 bg-gray-100 rounded-lg border border-gray-300 min-h-[60px] flex items-center justify-center text-gray-700">
+            La frase aparecerá aquí.
+        </div>
+    </div>
+</div>
+<script>
+const phrases = [
+    "Confía en Dios, Él nunca te abandona.",
+    "La fe mueve montañas.",
+    "Dios tiene el control de tu vida.",
+    "Cada día es una nueva oportunidad para creer."
+];
+document.getElementById('show-phrase').addEventListener('click', () => {
+    const output = document.getElementById('phrase-output');
+    const random = Math.floor(Math.random() * phrases.length);
+    output.textContent = phrases[random];
+});
+</script>
+            
+            <!-- Contact Information and Location -->
+            <div class="mt-12 text-center text-gray-700">
+                <p class="text-lg">También puedes visitarnos en:</p>
+                <p class="text-xl font-bold mt-2">1234 Calle de la Fe, Ciudad de la Esperanza</p>
+                <p class="text-lg mt-4">Envíanos un correo: <span class="font-bold">info@iglesiacasademigloria.com</span></p>
+
+                <!-- Map Section -->
+                <h3 class="text-3xl font-bold mt-12 mb-4 text-gray-900">Nuestra Ubicación</h3>
+                <!-- Placeholder iframe for the map. Replace 'YOUR_API_KEY' with your Google Maps API key
+                     and 'Managua+Nicaragua' with your church's actual address for a precise map. -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486.97411143392407!2d-85.66030476508179!3d12.463509100000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73a11234ce285d%3A0xedf3e11c6f3ccf05!2sIglesia%20Evang%C3%A9lica%20%22Casa%20de%20Mi%20Gloria%22!5e0!3m2!1ses!2sni!4v1759175467773!5m2!1ses!2sni"
+                    class="w-full h-96 rounded-lg shadow-lg border-2 border-gray-300"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Iglesia Casa de mi Gloria. Todos los derechos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
