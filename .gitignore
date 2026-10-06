@@ -1,0 +1,15 @@
+# Archivos de configuración y claves API
+.env
+.env.local
+.DS_Store
+
+# Dependencias de paquetes
+node_modules/
+
+# Archivos de caché y compilación
+.cache/
+dist/
+build/
+
+# Archivos generados por el sistema operativo
+Thumbs.db

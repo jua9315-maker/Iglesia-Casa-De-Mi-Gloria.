@@ -1,0 +1,7 @@
+{
+  "name": "Iglesia Casa De Mi Gloria",
+  "description": "Sitio web oficial de la Iglesia Casa de Mi Gloria. Información sobre sermones, transmisiones en vivo, eventos y comunidad.",
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
